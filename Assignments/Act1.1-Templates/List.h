@@ -1,5 +1,4 @@
 //Creamos clase que se llame list para guardar cualquier tipo de elementos
-
 #ifndef List_h //si la funcion no esta definida la defina
 #define List_h
 #include <vector>
