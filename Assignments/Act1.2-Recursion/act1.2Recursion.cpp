@@ -11,7 +11,7 @@ int factorial(int n) {
     return n * factorial(n-1);
 }
 
-int sumIterative(int n) {
+int sumItertive(int n) {
     int suma = 0;
     for (int i=1; i <= n; i++) {
         suma += i;
@@ -24,10 +24,6 @@ int sumRecursive(int n){
         return 1;
     }
     return n + sumRecursive(n-1);
-}
-
-int sumFormula(int n) {
-    return n * (n+1) / 2;
 }
 
 int fibonacciIterative(int n) {
@@ -59,6 +55,7 @@ int bacteriaIterative(int n) {
         sum += bacBorn - bacDied; 
     }
     return sum;
+
 }
 
 int bacteriaRecursive(int n) {
@@ -71,62 +68,23 @@ int bacteriaRecursive(int n) {
     return bacteria + born - died;
 }
 
-double investmentIterative(double capital, int n) {
-    double monto = capital;
-    for (int i=1; i<=n; i++) {
-        monto = monto + monto * 0.1875;
-    }
-    return monto;
-}
-
-double investmentRecursive(double capital, int n) {
-    if (n == 0) {
-        return capital;
-    }
-    double montoAnterior = investmentRecursive(capital, n-1);
-    return montoAnterior + montoAnterior * 0.1875;
-}
-
-int powIterative(int base, int exp) {
-    int resultado = 1;
-    for (int i=1; i<=exp; i++) {
-        resultado *= base;
-    }
-    return resultado;
-}
-
-int powRecursive(int base, int exp) {
-    if (exp == 0) {
-        return 1;
-    }
-    return base * powRecursive(base, exp-1);
-}
 
 int main() {
 
     cout << "El factorial de 7 es: " << factorial(6) << endl;
     // suma Iterativa
-    cout << "La suma iterativa de 5 es: " << sumIterative(5) << endl;
+    cout << "La suma iterativa de 5 es: " << sumItertive(5) << endl;
     // suma Recusiva
     cout << "La suma recursiva de 5 es: " << sumRecursive(5) << endl;
-    // suma formula
-    cout << "La suma con formula de 5 es: " << sumFormula(5) << endl;
     // fibonacci iterativa
     cout << "La fibonnacci iterativa de 8 es: " << fibonacciIterative(8) << endl;
     // fibonacci recursive
     cout << "La fibonnacci recursiva de 8 es: " << fibonacciRecursive(8) << endl;
     // bacteria iterativa
     cout << "La bacteraia iterativa de 5 es: " << bacteriaIterative(5) << endl;
-    // bacteria recursiva
-    cout << "La bacteraia recursiva de 5 es: " << bacteriaRecursive(5) << endl;
-    // inversion iterativa
-    cout << "La inversion iterativa de $1000 a 6 meses es: " << investmentIterative(1000, 6) << endl;
-    // inversion recursiva
-    cout << "La inversion recursiva de $1000 a 6 meses es: " << investmentRecursive(1000, 6) << endl;
-    // potencia iterativa
-    cout << "2 elevado a la 10 (iterativo) es: " << powIterative(2, 10) << endl;
-    // potencia recursiva
-    cout << "2 elevado a la 10 (recursivo) es: " << powRecursive(2, 10) << endl;
+    // fibonacci recursive
+    cout << "La fibonnacci recursiva de 5 es: " << bacteriaRecursive(5) << endl;
+
 
     return 0;
 }
