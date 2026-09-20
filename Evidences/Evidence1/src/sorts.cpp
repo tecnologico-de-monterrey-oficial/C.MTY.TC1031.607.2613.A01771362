@@ -32,3 +32,28 @@ void ordenarBurbuja(std::vector<LogEntry>& v) {
         if (!huboCambio) break;
     }
 }
+
+void ordenarSeleccion(std::vector<LogEntry>& v) {
+    size_t n = v.size();
+    for (size_t i = 0; i + 1 < n; i++) {
+        size_t minimo = i; //guarda la posición del registro más pequeño encontrado hasta ahora; empieza suponiendo que es el de la posición i
+        for (size_t j = i + 1; j < n; j++) { //revisa todo lo que queda a la derecha de i. Cada vez que encuentra uno más pequeño, actualiza minimo.
+            if (menorQue(v[j], v[minimo])) minimo = j;
+        }
+        if (minimo != i) std::swap(v[i], v[minimo]); //std::swap cambia de lugar el registro de i con el mínimo encontrado.
+    }
+}
+
+long long ordenarSwap(std::vector<LogEntry>& v) {
+    long long intercambios = 0;
+    size_t n = v.size();
+    for (size_t i = 0; i + 1 < n; i++) {
+        for (size_t j = i + 1; j < n; j++) {
+            if (menorQue(v[j], v[i])) {
+                std::swap(v[i], v[j]);
+                intercambios++;
+            }
+        }
+    }
+    return intercambios;
+}
