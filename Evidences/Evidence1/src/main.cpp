@@ -18,7 +18,7 @@ int main() {
         return 1;
     }
 
-    //creamos lista que crece sola
+        //creamos lista que crece sola
     std::vector<LogEntry> registros;
     std::string linea;
     while (std::getline(archivo, linea)) {
@@ -39,12 +39,11 @@ int main() {
 tiempo en milisegundos. Solo se cronometra el ordenamiento, no la lectura del archivo.
  */
     auto inicio = std::chrono::steady_clock::now();
-    long long intercambios = ordenarSwap(copia);
+    ordenarInsercion(copia);
     auto fin = std::chrono::steady_clock::now();
     double ms = std::chrono::duration<double, std::milli>(fin - inicio).count();
 
-    std::cout << "Swap Sort: " << ms << " ms\n";
-    std::cout << "Intercambios: " << intercambios << "\n";
+    std::cout << "Inserción: " << ms << " ms\n";
     std::cout << "¿Ordenado? " << (estaOrdenado(copia) ? "sí" : "no") << "\n";
     std::cout << "Primero: " << copia.front().linea << "\n";
     std::cout << "Último:  " << copia.back().linea << "\n";

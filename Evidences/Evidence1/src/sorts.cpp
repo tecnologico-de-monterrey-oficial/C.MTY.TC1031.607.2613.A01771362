@@ -57,3 +57,16 @@ long long ordenarSwap(std::vector<LogEntry>& v) {
     }
     return intercambios;
 }
+
+//Es como acomodar cartas en tu mano. Tomas la siguiente carta y la deslizas hacia la izquierda hasta que encaje
+void ordenarInsercion(std::vector<LogEntry>& v) {
+    for (size_t i = 1; i < v.size(); i++) {
+        LogEntry actual = std::move(v[i]); // actual es la carta que sacamos de la mano. std::move la mueve en vez de copiarla, y es más rápido.
+        size_t j = i;
+        while (j > 0 && menorQue(actual, v[j - 1])) {
+            v[j] = std::move(v[j - 1]);
+            j--;
+        }
+        v[j] = std::move(actual);
+    }
+}
