@@ -152,3 +152,25 @@ Ordenado correctamente: sí
 Tu predicción: Rápida (prediccion segun la complejidad teorica)
 Resultado medido: Rápida
 => Tu predicción COINCIDIÓ
+
+========== RESULTADO ==========
+Algoritmo: Inserción
+Archivo: data/log607-2.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 0.291625 ms
+Complejidad teórica: mejor caso O(n), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Rápida (casi ordenado, ya que cada registro se desliza pocas posiciones)
+Resultado medido: Rápida
+=> Tu predicción COINCIDIÓ
+
+========== RESULTADO ==========
+Algoritmo: Merge
+Archivo: data/log607-1.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 2.128292 ms
+Complejidad teórica: mejor caso O(n log n), peor caso O(n log n)
+Ordenado correctamente: sí
+Tu predicción: Rápida (desordenado, pero Mege siempre hace n log n)
+Resultado medido: Rápida
+=> Tu predicción COINCIDIÓ
