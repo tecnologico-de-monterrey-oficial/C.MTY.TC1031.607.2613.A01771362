@@ -1,0 +1,510 @@
+
+===== MENÚ =====
+  1) Ordenar un archivo
+  2) Buscar por rango de fechas
+  0) Salir
+Opción: 
+Archivo:
+  1) log607-1.txt (desordenado)
+  2) log607-2.txt (casi ordenado)
+Archivo: Cargados 6818 registros.
+
+Algoritmo:
+  1) Burbuja
+  2) Selección
+  3) Swap Sort
+  4) Inserción
+  5) Shell
+  6) Merge
+  7) Quick
+Algoritmo: 
+Tu predicción:
+  1) Rápida (menos de 5 ms)
+  2) Media (de 5 a 50 ms)
+  3) Lenta (más de 50 ms)
+¿Qué tan rápido crees que será?: ¿Por qué? 
+========== RESULTADO ==========
+Algoritmo: Burbuja
+Archivo: data/log607-1.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 82.688041 ms
+Complejidad teórica: mejor caso O(n), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Lenta (prediccion segun la complejidad teorica)
+Resultado medido: Lenta
+=> Tu predicción COINCIDIÓ
+Datos ordenados guardados en out/output607.txt
+
+===== MENÚ =====
+  1) Ordenar un archivo
+  2) Buscar por rango de fechas
+  0) Salir
+Opción: 
+Archivo:
+  1) log607-1.txt (desordenado)
+  2) log607-2.txt (casi ordenado)
+Archivo: Cargados 6818 registros.
+
+Algoritmo:
+  1) Burbuja
+  2) Selección
+  3) Swap Sort
+  4) Inserción
+  5) Shell
+  6) Merge
+  7) Quick
+Algoritmo: 
+Tu predicción:
+  1) Rápida (menos de 5 ms)
+  2) Media (de 5 a 50 ms)
+  3) Lenta (más de 50 ms)
+¿Qué tan rápido crees que será?: ¿Por qué? 
+========== RESULTADO ==========
+Algoritmo: Burbuja
+Archivo: data/log607-2.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 0.398625 ms
+Complejidad teórica: mejor caso O(n), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Rápida (prediccion segun la complejidad teorica)
+Resultado medido: Rápida
+=> Tu predicción COINCIDIÓ
+Datos ordenados guardados en out/output607.txt
+
+===== MENÚ =====
+  1) Ordenar un archivo
+  2) Buscar por rango de fechas
+  0) Salir
+Opción: 
+Archivo:
+  1) log607-1.txt (desordenado)
+  2) log607-2.txt (casi ordenado)
+Archivo: Cargados 6818 registros.
+
+Algoritmo:
+  1) Burbuja
+  2) Selección
+  3) Swap Sort
+  4) Inserción
+  5) Shell
+  6) Merge
+  7) Quick
+Algoritmo: 
+Tu predicción:
+  1) Rápida (menos de 5 ms)
+  2) Media (de 5 a 50 ms)
+  3) Lenta (más de 50 ms)
+¿Qué tan rápido crees que será?: ¿Por qué? 
+========== RESULTADO ==========
+Algoritmo: Selección
+Archivo: data/log607-1.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 105.139250 ms
+Complejidad teórica: mejor caso O(n^2), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Lenta (prediccion segun la complejidad teorica)
+Resultado medido: Lenta
+=> Tu predicción COINCIDIÓ
+Datos ordenados guardados en out/output607.txt
+
+===== MENÚ =====
+  1) Ordenar un archivo
+  2) Buscar por rango de fechas
+  0) Salir
+Opción: 
+Archivo:
+  1) log607-1.txt (desordenado)
+  2) log607-2.txt (casi ordenado)
+Archivo: Cargados 6818 registros.
+
+Algoritmo:
+  1) Burbuja
+  2) Selección
+  3) Swap Sort
+  4) Inserción
+  5) Shell
+  6) Merge
+  7) Quick
+Algoritmo: 
+Tu predicción:
+  1) Rápida (menos de 5 ms)
+  2) Media (de 5 a 50 ms)
+  3) Lenta (más de 50 ms)
+¿Qué tan rápido crees que será?: ¿Por qué? 
+========== RESULTADO ==========
+Algoritmo: Selección
+Archivo: data/log607-2.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 98.819750 ms
+Complejidad teórica: mejor caso O(n^2), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Lenta (prediccion segun la complejidad teorica)
+Resultado medido: Lenta
+=> Tu predicción COINCIDIÓ
+Datos ordenados guardados en out/output607.txt
+
+===== MENÚ =====
+  1) Ordenar un archivo
+  2) Buscar por rango de fechas
+  0) Salir
+Opción: 
+Archivo:
+  1) log607-1.txt (desordenado)
+  2) log607-2.txt (casi ordenado)
+Archivo: Cargados 6818 registros.
+
+Algoritmo:
+  1) Burbuja
+  2) Selección
+  3) Swap Sort
+  4) Inserción
+  5) Shell
+  6) Merge
+  7) Quick
+Algoritmo: 
+Tu predicción:
+  1) Rápida (menos de 5 ms)
+  2) Media (de 5 a 50 ms)
+  3) Lenta (más de 50 ms)
+¿Qué tan rápido crees que será?: ¿Por qué? 
+========== RESULTADO ==========
+Algoritmo: Swap Sort
+Archivo: data/log607-1.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 85.513333 ms
+Complejidad teórica: mejor caso O(n^2), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Lenta (prediccion segun la complejidad teorica)
+Resultado medido: Lenta
+=> Tu predicción COINCIDIÓ
+Datos ordenados guardados en out/output607.txt
+
+===== MENÚ =====
+  1) Ordenar un archivo
+  2) Buscar por rango de fechas
+  0) Salir
+Opción: 
+Archivo:
+  1) log607-1.txt (desordenado)
+  2) log607-2.txt (casi ordenado)
+Archivo: Cargados 6818 registros.
+
+Algoritmo:
+  1) Burbuja
+  2) Selección
+  3) Swap Sort
+  4) Inserción
+  5) Shell
+  6) Merge
+  7) Quick
+Algoritmo: 
+Tu predicción:
+  1) Rápida (menos de 5 ms)
+  2) Media (de 5 a 50 ms)
+  3) Lenta (más de 50 ms)
+¿Qué tan rápido crees que será?: ¿Por qué? 
+========== RESULTADO ==========
+Algoritmo: Swap Sort
+Archivo: data/log607-2.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 20.970042 ms
+Complejidad teórica: mejor caso O(n^2), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Lenta (prediccion segun la complejidad teorica)
+Resultado medido: Media
+=> Tu predicción NO coincidió
+Datos ordenados guardados en out/output607.txt
+
+===== MENÚ =====
+  1) Ordenar un archivo
+  2) Buscar por rango de fechas
+  0) Salir
+Opción: 
+Archivo:
+  1) log607-1.txt (desordenado)
+  2) log607-2.txt (casi ordenado)
+Archivo: Cargados 6818 registros.
+
+Algoritmo:
+  1) Burbuja
+  2) Selección
+  3) Swap Sort
+  4) Inserción
+  5) Shell
+  6) Merge
+  7) Quick
+Algoritmo: 
+Tu predicción:
+  1) Rápida (menos de 5 ms)
+  2) Media (de 5 a 50 ms)
+  3) Lenta (más de 50 ms)
+¿Qué tan rápido crees que será?: ¿Por qué? 
+========== RESULTADO ==========
+Algoritmo: Inserción
+Archivo: data/log607-1.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 17.866167 ms
+Complejidad teórica: mejor caso O(n), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Lenta (prediccion segun la complejidad teorica)
+Resultado medido: Media
+=> Tu predicción NO coincidió
+Datos ordenados guardados en out/output607.txt
+
+===== MENÚ =====
+  1) Ordenar un archivo
+  2) Buscar por rango de fechas
+  0) Salir
+Opción: 
+Archivo:
+  1) log607-1.txt (desordenado)
+  2) log607-2.txt (casi ordenado)
+Archivo: Cargados 6818 registros.
+
+Algoritmo:
+  1) Burbuja
+  2) Selección
+  3) Swap Sort
+  4) Inserción
+  5) Shell
+  6) Merge
+  7) Quick
+Algoritmo: 
+Tu predicción:
+  1) Rápida (menos de 5 ms)
+  2) Media (de 5 a 50 ms)
+  3) Lenta (más de 50 ms)
+¿Qué tan rápido crees que será?: ¿Por qué? 
+========== RESULTADO ==========
+Algoritmo: Inserción
+Archivo: data/log607-2.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 0.108375 ms
+Complejidad teórica: mejor caso O(n), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Rápida (prediccion segun la complejidad teorica)
+Resultado medido: Rápida
+=> Tu predicción COINCIDIÓ
+Datos ordenados guardados en out/output607.txt
+
+===== MENÚ =====
+  1) Ordenar un archivo
+  2) Buscar por rango de fechas
+  0) Salir
+Opción: 
+Archivo:
+  1) log607-1.txt (desordenado)
+  2) log607-2.txt (casi ordenado)
+Archivo: Cargados 6818 registros.
+
+Algoritmo:
+  1) Burbuja
+  2) Selección
+  3) Swap Sort
+  4) Inserción
+  5) Shell
+  6) Merge
+  7) Quick
+Algoritmo: 
+Tu predicción:
+  1) Rápida (menos de 5 ms)
+  2) Media (de 5 a 50 ms)
+  3) Lenta (más de 50 ms)
+¿Qué tan rápido crees que será?: ¿Por qué? 
+========== RESULTADO ==========
+Algoritmo: Shell
+Archivo: data/log607-1.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 0.734708 ms
+Complejidad teórica: mejor caso O(n log n), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Rápida (prediccion segun la complejidad teorica)
+Resultado medido: Rápida
+=> Tu predicción COINCIDIÓ
+Datos ordenados guardados en out/output607.txt
+
+===== MENÚ =====
+  1) Ordenar un archivo
+  2) Buscar por rango de fechas
+  0) Salir
+Opción: 
+Archivo:
+  1) log607-1.txt (desordenado)
+  2) log607-2.txt (casi ordenado)
+Archivo: Cargados 6818 registros.
+
+Algoritmo:
+  1) Burbuja
+  2) Selección
+  3) Swap Sort
+  4) Inserción
+  5) Shell
+  6) Merge
+  7) Quick
+Algoritmo: 
+Tu predicción:
+  1) Rápida (menos de 5 ms)
+  2) Media (de 5 a 50 ms)
+  3) Lenta (más de 50 ms)
+¿Qué tan rápido crees que será?: ¿Por qué? 
+========== RESULTADO ==========
+Algoritmo: Shell
+Archivo: data/log607-2.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 0.260292 ms
+Complejidad teórica: mejor caso O(n log n), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Rápida (prediccion segun la complejidad teorica)
+Resultado medido: Rápida
+=> Tu predicción COINCIDIÓ
+Datos ordenados guardados en out/output607.txt
+
+===== MENÚ =====
+  1) Ordenar un archivo
+  2) Buscar por rango de fechas
+  0) Salir
+Opción: 
+Archivo:
+  1) log607-1.txt (desordenado)
+  2) log607-2.txt (casi ordenado)
+Archivo: Cargados 6818 registros.
+
+Algoritmo:
+  1) Burbuja
+  2) Selección
+  3) Swap Sort
+  4) Inserción
+  5) Shell
+  6) Merge
+  7) Quick
+Algoritmo: 
+Tu predicción:
+  1) Rápida (menos de 5 ms)
+  2) Media (de 5 a 50 ms)
+  3) Lenta (más de 50 ms)
+¿Qué tan rápido crees que será?: ¿Por qué? 
+========== RESULTADO ==========
+Algoritmo: Merge
+Archivo: data/log607-1.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 0.649666 ms
+Complejidad teórica: mejor caso O(n log n), peor caso O(n log n)
+Ordenado correctamente: sí
+Tu predicción: Rápida (prediccion segun la complejidad teorica)
+Resultado medido: Rápida
+=> Tu predicción COINCIDIÓ
+Datos ordenados guardados en out/output607.txt
+
+===== MENÚ =====
+  1) Ordenar un archivo
+  2) Buscar por rango de fechas
+  0) Salir
+Opción: 
+Archivo:
+  1) log607-1.txt (desordenado)
+  2) log607-2.txt (casi ordenado)
+Archivo: Cargados 6818 registros.
+
+Algoritmo:
+  1) Burbuja
+  2) Selección
+  3) Swap Sort
+  4) Inserción
+  5) Shell
+  6) Merge
+  7) Quick
+Algoritmo: 
+Tu predicción:
+  1) Rápida (menos de 5 ms)
+  2) Media (de 5 a 50 ms)
+  3) Lenta (más de 50 ms)
+¿Qué tan rápido crees que será?: ¿Por qué? 
+========== RESULTADO ==========
+Algoritmo: Merge
+Archivo: data/log607-2.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 0.457417 ms
+Complejidad teórica: mejor caso O(n log n), peor caso O(n log n)
+Ordenado correctamente: sí
+Tu predicción: Rápida (prediccion segun la complejidad teorica)
+Resultado medido: Rápida
+=> Tu predicción COINCIDIÓ
+Datos ordenados guardados en out/output607.txt
+
+===== MENÚ =====
+  1) Ordenar un archivo
+  2) Buscar por rango de fechas
+  0) Salir
+Opción: 
+Archivo:
+  1) log607-1.txt (desordenado)
+  2) log607-2.txt (casi ordenado)
+Archivo: Cargados 6818 registros.
+
+Algoritmo:
+  1) Burbuja
+  2) Selección
+  3) Swap Sort
+  4) Inserción
+  5) Shell
+  6) Merge
+  7) Quick
+Algoritmo: 
+Tu predicción:
+  1) Rápida (menos de 5 ms)
+  2) Media (de 5 a 50 ms)
+  3) Lenta (más de 50 ms)
+¿Qué tan rápido crees que será?: ¿Por qué? 
+========== RESULTADO ==========
+Algoritmo: Quick
+Archivo: data/log607-1.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 0.544209 ms
+Complejidad teórica: mejor caso O(n log n), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Rápida (prediccion segun la complejidad teorica)
+Resultado medido: Rápida
+=> Tu predicción COINCIDIÓ
+Datos ordenados guardados en out/output607.txt
+
+===== MENÚ =====
+  1) Ordenar un archivo
+  2) Buscar por rango de fechas
+  0) Salir
+Opción: 
+Archivo:
+  1) log607-1.txt (desordenado)
+  2) log607-2.txt (casi ordenado)
+Archivo: Cargados 6818 registros.
+
+Algoritmo:
+  1) Burbuja
+  2) Selección
+  3) Swap Sort
+  4) Inserción
+  5) Shell
+  6) Merge
+  7) Quick
+Algoritmo: 
+Tu predicción:
+  1) Rápida (menos de 5 ms)
+  2) Media (de 5 a 50 ms)
+  3) Lenta (más de 50 ms)
+¿Qué tan rápido crees que será?: ¿Por qué? 
+========== RESULTADO ==========
+Algoritmo: Quick
+Archivo: data/log607-2.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 0.351459 ms
+Complejidad teórica: mejor caso O(n log n), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Rápida (prediccion segun la complejidad teorica)
+Resultado medido: Rápida
+=> Tu predicción COINCIDIÓ
+Datos ordenados guardados en out/output607.txt
+
+===== MENÚ =====
+  1) Ordenar un archivo
+  2) Buscar por rango de fechas
+  0) Salir
+Opción: Hasta luego.
