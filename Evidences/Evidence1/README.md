@@ -162,4 +162,3 @@ Usé Claude (Anthropic) como guía durante todo el proyecto.
 **Lo que no permití / condiciones que puse:**
 - No entregar nada sin compilarlo, ejecutarlo y probarlo yo, con los datos reales.
 
-El detalle de los prompts, lo que modifiqué y un caso concreto donde la IA se equivocó está en `docs/ReflexEvidencia1.pdf`.
