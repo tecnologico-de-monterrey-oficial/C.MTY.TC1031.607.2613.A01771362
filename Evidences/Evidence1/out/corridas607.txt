@@ -9,3 +9,36 @@ Ordenado correctamente: sí
 Tu predicción: Rápida (porque considero que ....)
 Resultado medido: Rápida
 => Tu predicción COINCIDIÓ
+
+========== RESULTADO ==========
+Algoritmo: Burbuja
+Archivo: data/log607-2.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 0.953625 ms
+Complejidad teórica: mejor caso O(n), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Media (porque ....,)
+Resultado medido: Rápida
+=> Tu predicción NO coincidió
+
+========== RESULTADO ==========
+Algoritmo: Inserción
+Archivo: data/log607-2.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 0.205375 ms
+Complejidad teórica: mejor caso O(n), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Rápida (prueba)
+Resultado medido: Rápida
+=> Tu predicción COINCIDIÓ
+
+========== RESULTADO ==========
+Algoritmo: Inserción
+Archivo: data/log607-2.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 0.098416 ms
+Complejidad teórica: mejor caso O(n), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Rápida (prueba)
+Resultado medido: Rápida
+=> Tu predicción COINCIDIÓ
