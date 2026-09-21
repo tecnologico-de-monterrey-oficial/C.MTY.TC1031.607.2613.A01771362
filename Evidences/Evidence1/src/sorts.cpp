@@ -70,3 +70,22 @@ void ordenarInsercion(std::vector<LogEntry>& v) {
         v[j] = std::move(actual);
     }
 }
+
+void ordenarShell(std::vector<LogEntry>& v) {
+    size_t n = v.size();
+    size_t salto = 1;
+    while (salto < n / 3) salto = 3 * salto + 1;   // 1, 4, 13, 40, 121, ...
+
+    while (salto >= 1) {
+        for (size_t i = salto; i < n; i++) {
+            LogEntry actual = std::move(v[i]);
+            size_t j = i;
+            while (j >= salto && menorQue(actual, v[j - salto])) {
+                v[j] = std::move(v[j - salto]);
+                j -= salto;
+            }
+            v[j] = std::move(actual);
+        }
+        salto /= 3;
+    }
+}

@@ -39,11 +39,11 @@ int main() {
 tiempo en milisegundos. Solo se cronometra el ordenamiento, no la lectura del archivo.
  */
     auto inicio = std::chrono::steady_clock::now();
-    ordenarInsercion(copia);
+    ordenarShell(copia);
     auto fin = std::chrono::steady_clock::now();
     double ms = std::chrono::duration<double, std::milli>(fin - inicio).count();
 
-    std::cout << "Inserción: " << ms << " ms\n";
+    std::cout << "Shell: " << ms << " ms\n";
     std::cout << "¿Ordenado? " << (estaOrdenado(copia) ? "sí" : "no") << "\n";
     std::cout << "Primero: " << copia.front().linea << "\n";
     std::cout << "Último:  " << copia.back().linea << "\n";
