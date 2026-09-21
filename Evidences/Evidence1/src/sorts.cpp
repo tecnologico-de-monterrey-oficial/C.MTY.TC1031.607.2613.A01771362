@@ -118,3 +118,23 @@ void ordenarMerge(std::vector<LogEntry>& v) {
     std::vector<LogEntry> aux(v.size());  // espacio de trabajo para mezclar
     mergeRec(v, aux, 0, v.size());
 }
+
+static void quickRec(std::vector<LogEntry>& v, long long lo, long long hi) {
+    if (lo >= hi) return;              // 0 o 1 elemento: ya está ordenado
+
+    long long i = lo;                  // aquí termina la zona de los "menores"
+    for (long long j = lo; j < hi; j++) {
+        if (menorQue(v[j], v[hi])) {   // v[hi] es el pivote
+            std::swap(v[i], v[j]);
+            i++;
+        }
+    }
+    std::swap(v[i], v[hi]);            // el pivote queda en su lugar final
+
+    quickRec(v, lo, i - 1);            // ordenar los menores
+    quickRec(v, i + 1, hi);            // ordenar los mayores
+}
+
+void ordenarQuick(std::vector<LogEntry>& v) {
+    if (v.size() > 1) quickRec(v, 0, static_cast<long long>(v.size()) - 1);
+}
