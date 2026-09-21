@@ -12,7 +12,7 @@
 #include "sorts.h"
 
 int main() {
-    std::ifstream archivo("data/log607-1.txt");
+    std::ifstream archivo("data/log607-2.txt");
     if (!archivo) {
         std::cout << "No pude abrir el archivo\n";
         return 1;
