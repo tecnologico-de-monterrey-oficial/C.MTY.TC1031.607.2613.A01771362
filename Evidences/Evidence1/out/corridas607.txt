@@ -1,0 +1,33 @@
+
+========== RESULTADO ==========
+Algoritmo: Burbuja
+Archivo: data/log607-1.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 104.028875 ms
+Complejidad teórica: mejor caso O(n), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Rápida (porque sisisi)
+Resultado medido: Lenta
+=> Tu predicción NO coincidió
+
+========== RESULTADO ==========
+Algoritmo: Inserción
+Archivo: data/log607-2.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 0.296208 ms
+Complejidad teórica: mejor caso O(n), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Media (porque bla bla bla )
+Resultado medido: Rápida
+=> Tu predicción NO coincidió
+
+========== RESULTADO ==========
+Algoritmo: Burbuja
+Archivo: data/log607-1.txt
+Tamaño de los datos: 6818 registros
+Tiempo de ordenamiento: 104.713875 ms
+Complejidad teórica: mejor caso O(n), peor caso O(n^2)
+Ordenado correctamente: sí
+Tu predicción: Lenta (porque bla bla )
+Resultado medido: Lenta
+=> Tu predicción COINCIDIÓ

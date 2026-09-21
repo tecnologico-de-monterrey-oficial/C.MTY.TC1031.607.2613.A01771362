@@ -2,7 +2,12 @@
 //A01771362
 //menu que tiene lo de archivo, algoritmo, predicción
 
+//Pamela Hernández Camacho
+//A01771362
+//menu que tiene lo de archivo, algoritmo, predicción
+
 #include <chrono>
+#include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -11,15 +16,11 @@
 #include "Parser.h"
 #include "sorts.h"
 
-int main() {
-    std::ifstream archivo("data/log607-2.txt");
-    if (!archivo) {
-        std::cout << "No pude abrir el archivo\n";
-        return 1;
-    }
-
-        //creamos lista que crece sola
-    std::vector<LogEntry> registros;
+// Lee un archivo de bitácora y llena el vector. Devuelve false si no pudo abrirlo.
+bool cargarArchivo(const std::string& ruta, std::vector<LogEntry>& registros) {
+    std::ifstream archivo(ruta);
+    if (!archivo) return false;
+    registros.clear();
     std::string linea;
     while (std::getline(archivo, linea)) {
         long long clave;
@@ -31,21 +32,117 @@ int main() {
             registros.push_back(e);
         }
     }
-    std::cout << "Registros válidos: " << registros.size() << "\n";
+    return true;
+}
 
-    std::vector<LogEntry> copia = registros; // ordenamos una copia
+// Escribe cada registro en una línea del archivo. Devuelve false si no pudo escribir.
+bool guardarArchivo(const std::string& ruta, const std::vector<LogEntry>& v) {
+    std::ofstream salida(ruta);
+    if (!salida) return false;
+    for (size_t i = 0; i < v.size(); i++) salida << v[i].linea << "\n";
+    return true;
+}
 
-    /* chrono: toma la hora justo antes y justo después de ordenar, y la resta da el 
-tiempo en milisegundos. Solo se cronometra el ordenamiento, no la lectura del archivo.
- */
-    auto inicio = std::chrono::steady_clock::now();
-    ordenarQuick(copia);
-    auto fin = std::chrono::steady_clock::now();
-    double ms = std::chrono::duration<double, std::milli>(fin - inicio).count();
+// Pregunta hasta que el usuario escriba un número entre minimo y maximo.
+int leerOpcion(const std::string& pregunta, int minimo, int maximo) {
+    while (true) {
+        std::cout << pregunta;
+        std::string texto;
+        if (!std::getline(std::cin, texto)) std::exit(0);   // por si se cierra la entrada
+        try {
+            size_t usados = 0;
+            int valor = std::stoi(texto, &usados);
+            if (usados == texto.size() && valor >= minimo && valor <= maximo) return valor;
+        } catch (...) {}
+        std::cout << "  Opción inválida. Escribe un número entre "
+                  << minimo << " y " << maximo << ".\n";
+    }
+}
 
-    std::cout << "Quick: " << ms << " ms\n";
-    std::cout << "¿Ordenado? " << (estaOrdenado(copia) ? "sí" : "no") << "\n";
-    std::cout << "Primero: " << copia.front().linea << "\n";
-    std::cout << "Último:  " << copia.back().linea << "\n";
+// Llama al algoritmo que eligió el usuario.
+void ejecutarAlgoritmo(int alg, std::vector<LogEntry>& v) {
+    switch (alg) {
+        case 1: ordenarBurbuja(v);   break;
+        case 2: ordenarSeleccion(v); break;
+        case 3: ordenarSwap(v);      break;
+        case 4: ordenarInsercion(v); break;
+        case 5: ordenarShell(v);     break;
+        case 6: ordenarMerge(v);     break;
+        case 7: ordenarQuick(v);     break;
+    }
+}
+
+int main() {
+    const std::string archivos[2] = {"data/log607-1.txt", "data/log607-2.txt"};
+    const std::string nombres[7] = {"Burbuja", "Selección", "Swap Sort", "Inserción",
+                                    "Shell", "Merge", "Quick"};
+    const std::string mejor[7] = {"O(n)", "O(n^2)", "O(n^2)", "O(n)",
+                                  "O(n log n)", "O(n log n)", "O(n log n)"};
+    const std::string peor[7]  = {"O(n^2)", "O(n^2)", "O(n^2)", "O(n^2)",
+                                  "O(n^2)", "O(n log n)", "O(n^2)"};
+    const std::string categorias[3] = {"Rápida", "Media", "Lenta"};
+
+    std::vector<LogEntry> ordenado;   // resultado de la última corrida (lo usaremos en la búsqueda)
+
+    while (true) {
+        std::cout << "\n===== MENÚ =====\n  1) Ordenar un archivo\n  0) Salir\n";
+        if (leerOpcion("Opción: ", 0, 1) == 0) break;
+
+        std::cout << "\nArchivo:\n  1) log607-1.txt (desordenado)\n  2) log607-2.txt (casi ordenado)\n";
+        int arch = leerOpcion("Archivo: ", 1, 2);
+
+        std::vector<LogEntry> registros;
+        if (!cargarArchivo(archivos[arch - 1], registros)) {
+            std::cout << "No pude abrir " << archivos[arch - 1] << "\n";
+            continue;
+        }
+        std::cout << "Cargados " << registros.size() << " registros.\n";
+
+        std::cout << "\nAlgoritmo:\n";
+        for (int i = 0; i < 7; i++) std::cout << "  " << i + 1 << ") " << nombres[i] << "\n";
+        int alg = leerOpcion("Algoritmo: ", 1, 7);
+
+        std::cout << "\nTu predicción:\n  1) Rápida (menos de 5 ms)\n"
+                  << "  2) Media (de 5 a 50 ms)\n  3) Lenta (más de 50 ms)\n";
+        int pred = leerOpcion("¿Qué tan rápido crees que será?: ", 1, 3);
+        std::cout << "¿Por qué? ";
+        std::string razon;
+        std::getline(std::cin, razon);
+
+        // Se ordena una copia y solo se cronometra el ordenamiento
+        std::vector<LogEntry> copia = registros;
+        auto inicio = std::chrono::steady_clock::now();
+        ejecutarAlgoritmo(alg, copia);
+        auto fin = std::chrono::steady_clock::now();
+        double ms = std::chrono::duration<double, std::milli>(fin - inicio).count();
+
+        int real = (ms < 5) ? 1 : (ms <= 50 ? 2 : 3);
+
+        std::string reporte;
+        reporte += "\n========== RESULTADO ==========\n";
+        reporte += "Algoritmo: " + nombres[alg - 1] + "\n";
+        reporte += "Archivo: " + archivos[arch - 1] + "\n";
+        reporte += "Tamaño de los datos: " + std::to_string(registros.size()) + " registros\n";
+        reporte += "Tiempo de ordenamiento: " + std::to_string(ms) + " ms\n";
+        reporte += "Complejidad teórica: mejor caso " + mejor[alg - 1]
+                 + ", peor caso " + peor[alg - 1] + "\n";
+        reporte += "Ordenado correctamente: " + std::string(estaOrdenado(copia) ? "sí" : "no") + "\n";
+        reporte += "Tu predicción: " + categorias[pred - 1] + " (" + razon + ")\n";
+        reporte += "Resultado medido: " + categorias[real - 1] + "\n";
+        reporte += (pred == real) ? "=> Tu predicción COINCIDIÓ\n" : "=> Tu predicción NO coincidió\n";
+
+        std::cout << reporte;
+
+        std::ofstream bitacora("out/corridas607.txt", std::ios::app);   // app = agregar al final
+        if (bitacora) bitacora << reporte;
+
+        if (guardarArchivo("out/output607.txt", copia))
+            std::cout << "Datos ordenados guardados en out/output607.txt\n";
+        else
+            std::cout << "No pude guardar out/output607.txt\n";
+
+        ordenado = copia;
+    }
+    std::cout << "Hasta luego.\n";
     return 0;
 }
