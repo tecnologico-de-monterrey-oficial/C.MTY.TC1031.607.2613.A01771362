@@ -24,3 +24,4 @@ size_t limiteSuperior(const std::vector<LogEntry>& v, long long clave) {
     }
     return lo;
 }
+
