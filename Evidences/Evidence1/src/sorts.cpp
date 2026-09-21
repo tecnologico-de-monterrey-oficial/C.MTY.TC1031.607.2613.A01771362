@@ -89,3 +89,32 @@ void ordenarShell(std::vector<LogEntry>& v) {
         salto /= 3;
     }
 }
+
+// Mezcla dos mitades ya ordenadas: [lo, mid) y [mid, hi)
+static void mezclar(std::vector<LogEntry>& v, std::vector<LogEntry>& aux,
+                    size_t lo, size_t mid, size_t hi) { //mezclar usa tres "dedos": i en la mitad izquierda, j en la derecha, k donde va escribiendo en aux. Compara v[j] con v[i] y se lleva el menor. Los dos while siguientes copian lo que sobró en alguna mitad.
+    size_t i = lo, j = mid, k = lo;
+    while (i < mid && j < hi) {
+        if (menorQue(v[j], v[i])) aux[k++] = std::move(v[j++]);
+        else                      aux[k++] = std::move(v[i++]);
+    }
+    while (i < mid) aux[k++] = std::move(v[i++]);
+    while (j < hi)  aux[k++] = std::move(v[j++]);
+    for (size_t p = lo; p < hi; p++) v[p] = std::move(aux[p]); //El último for regresa el resultado de aux al vector original.
+}
+
+// Ordena la parte [lo, hi) del vector: divide, ordena cada mitad y mezcla
+//es decir, [lo, hi) significa "desde lo incluido hasta hi sin incluir". Es una convención muy común que evita errores de "uno de más".
+static void mergeRec(std::vector<LogEntry>& v, std::vector<LogEntry>& aux,
+                     size_t lo, size_t hi) {
+    if (hi - lo < 2) return;              // 0 o 1 elemento: ya está ordenado
+    size_t mid = lo + (hi - lo) / 2;
+    mergeRec(v, aux, lo, mid); //mergeRec tiene dos partes: el caso base (if (hi - lo < 2) return;, con 0 o 1 elemento no hay nada que hacer, y es lo que detiene la recursión) y el paso recursivo (se llama a sí misma con cada mitad).
+    mergeRec(v, aux, mid, hi);
+    mezclar(v, aux, lo, mid, hi);
+}
+
+void ordenarMerge(std::vector<LogEntry>& v) {
+    std::vector<LogEntry> aux(v.size());  // espacio de trabajo para mezclar
+    mergeRec(v, aux, 0, v.size());
+}

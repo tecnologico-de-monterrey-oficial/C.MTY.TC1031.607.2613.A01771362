@@ -28,5 +28,6 @@ void ordenarSeleccion(std::vector<LogEntry>& v);
 long long ordenarSwap(std::vector<LogEntry>& v);
 void ordenarInsercion(std::vector<LogEntry>& v);
 void ordenarShell(std::vector<LogEntry>& v);
+void ordenarMerge(std::vector<LogEntry>& v);
 
 #endif

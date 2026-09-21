@@ -12,7 +12,7 @@
 #include "sorts.h"
 
 int main() {
-    std::ifstream archivo("data/log607-2.txt");
+    std::ifstream archivo("data/log607-1.txt");
     if (!archivo) {
         std::cout << "No pude abrir el archivo\n";
         return 1;
@@ -39,11 +39,11 @@ int main() {
 tiempo en milisegundos. Solo se cronometra el ordenamiento, no la lectura del archivo.
  */
     auto inicio = std::chrono::steady_clock::now();
-    ordenarShell(copia);
+    ordenarMerge(copia);
     auto fin = std::chrono::steady_clock::now();
     double ms = std::chrono::duration<double, std::milli>(fin - inicio).count();
 
-    std::cout << "Shell: " << ms << " ms\n";
+    std::cout << "Merge: " << ms << " ms\n";
     std::cout << "¿Ordenado? " << (estaOrdenado(copia) ? "sí" : "no") << "\n";
     std::cout << "Primero: " << copia.front().linea << "\n";
     std::cout << "Último:  " << copia.back().linea << "\n";
