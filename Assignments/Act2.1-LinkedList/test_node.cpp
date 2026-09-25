@@ -1,5 +1,5 @@
-// Pam
-// A
+//Pamela Hernández Camacho
+//A01771362
 #include <iostream>
 using namespace std;
 

@@ -1,21 +1,5 @@
 //Pamela Hernández Camacho
-//A011771362
-#include <iostream>
-
-cout<< "Valores de q"<< endl;
-int* q = new int(5);
-cout<< q<< endl;
-cout<< *q<< endl;
-
-
-delete q; //le asigno espacio de memoria a un progrmaa es exclusivo del programa 
-cout<< q <<endl;
-cout<< *q <<endl; //
-
-//investigar fracción
-
-//direccion de memoria hay un objeto de tipo fracción
-
+//A01771362
 #include <iostream>
 #include <memory>
 using namespace std;
@@ -48,7 +32,7 @@ int main() {
     delete f;
     f = nullptr;
 
-    auto g = std::make_unique<Fraction>(3, 4);
+    std::unique_ptr<Fraction> g = std::make_unique<Fraction>(3, 4);
     g->print();
     cout << g->getDenominator() << "/" << g->getNumerator() << endl;
 

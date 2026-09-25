@@ -1,5 +1,5 @@
-// Pamela Hernández Camacho
-// A01771362
+// David Alonso Cantú Delgado
+// A00189239
 #ifndef Fraction_h
 #define Fraction_h
 #include <iostream>

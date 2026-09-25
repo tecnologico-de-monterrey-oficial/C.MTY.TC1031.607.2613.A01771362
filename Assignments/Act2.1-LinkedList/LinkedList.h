@@ -1,5 +1,5 @@
-// Pamela Hernández Camacho
-// A01771362
+//Pamela Hernández Camacho
+//A01771362
 #ifndef LinkedList_h
 #define LinkedList_h
 
@@ -8,7 +8,7 @@
 template <typename T>
 class LinkedList {
 private:
-    < Node<T>* head;
+    Node<T>* head;
     int size;
 public:
     LinkedList() : head(nullptr), size(0) {}
@@ -20,7 +20,7 @@ public:
 template <typename T>
 void LinkedList<T>::push_front(T data) {
     // crear un nodo nuevo
-    Node<T>* node = new< Node<T> >(data);
+    Node<T>* node = new Node<T>(data);
     // actualizo el next del nodo nuevo para que apunte a head
     node->next = head;
     // actualizo head
@@ -30,11 +30,11 @@ void LinkedList<T>::push_front(T data) {
 template <typename T>
 void LinkedList<T>::print() {
     // creamos un apuntador auxiliar que apunte a head
-    Node<T>* aux = head();
+    Node<T>* aux = head;
     // recorremos la lista mientras aux sea diferente de nullptr
     while (aux != nullptr) {
         cout << aux->data;
-        aux = aux->next();
+        aux = aux->next;
         if (aux != nullptr) {
             cout << "-";
         }

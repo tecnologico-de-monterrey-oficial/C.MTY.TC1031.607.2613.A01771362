@@ -1,5 +1,5 @@
-// Pame
-// A01771362
+//Pamela Hernández Camacho
+//A01771362
 #include <iostream>
 using namespace std;
 #include "LinkedList.h"
