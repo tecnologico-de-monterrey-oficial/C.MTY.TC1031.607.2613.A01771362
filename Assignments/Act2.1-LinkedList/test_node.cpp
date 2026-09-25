@@ -1,5 +1,5 @@
-// David Alonso Cantú Delgado
-// A00189239
+// Pam
+// A
 #include <iostream>
 using namespace std;
 
