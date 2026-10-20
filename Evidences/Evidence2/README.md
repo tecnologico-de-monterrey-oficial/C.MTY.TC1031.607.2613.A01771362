@@ -1,122 +1,81 @@
-# Analizador de logs de red - C++
+# Evidencia 2 - Analizador de eventos de red (C++17)
 
-Aplicacion didactica para procesar registros de red por fecha/hora con estructuras
-lineales implementadas mediante nodos y punteros. Desarrollada para la Parte B
-de la actividad; las estructuras de la Parte A se ofrecen como **material de
-referencia para estudiar y comprobar**, ya que el enunciado indica que la Parte
-A debe trabajarse en clase sin asistentes de IA. Sigue esa regla con tu entrega.
+Aplicación que recibe líneas de log mediante una Fila, valida registros y los almacena en una lista doblemente ligada. Ordena cronológicamente con **Merge Sort estable** sin copiar los registros a arreglos, busca por día, muestra resultados descendentes mediante Pila y calcula estadísticas con empates.
 
-## Requisitos
+## Compilación y ejecución
 
-- macOS o Linux con `g++` compatible con C++17.
-- Terminal y, opcionalmente, Visual Studio Code.
-- No se necesitan paquetes externos.
-
-## Inicio rapido en Mac (Terminal de VS Code)
-
-1. Abre en VS Code la carpeta `Proyecto_Logs_Cpp` completa.
-2. En **Terminal > New Terminal**, verifica que estes en esa carpeta (`pwd`).
-3. Ejecuta `chmod +x ejecutar_mac.sh` (solo si fuera necesario).
-4. Ejecuta `./ejecutar_mac.sh`.
-5. Elige el archivo `1` o `2`, luego la opcion `1` del menu para ordenar.
-6. En la prediccion escribe `1` para `n*log2(n)`.
-7. Prueba las opciones `2`, `3`, `4` y `5`.
-
-### Compilacion manual
+Situarse en `Evidences/Evidence2` (raíz de esta actividad):
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra -pedantic -Iinclude src/main.cpp -o app
-g++ -std=c++17 -O2 -Wall -Wextra -pedantic -Iinclude src/tests.cpp -o tests_estructuras
-./tests_estructuras
-./app
+mkdir -p output out
+g++ -std=c++17 -O2 -Wall -Wextra -pedantic -Iinclude src/main.cpp -o output/app
+g++ -std=c++17 -O2 -Wall -Wextra -pedantic -Iinclude src/tests.cpp -o output/tests_estructuras
+./output/tests_estructuras
+./output/app
 ```
 
-Importante: ejecuta `./app` desde la raiz del proyecto. Asi encontrara
-`data/` y podra generar `out/output608.out`.
+Requisitos: compilador g++ con C++17, macOS o Linux. No se requieren bibliotecas externas.
 
-## Archivos de entrada y salida
+## Entradas y salida
 
-El enunciado presenta una inconsistencia: menciona `log608-1.txt` y
-`log608-2.txt` en algunas partes, pero los adjuntos reales se llaman
-`log607-1.txt` y `log607-2.txt`.
+Los archivos proporcionados se llaman **log607-1.txt** (desordenado) y **log607-2.txt** (casi ordenado). Algunas instrucciones mencionan `608`; se conserva el nombre real de los archivos de datos. Ambos contienen 6,818 registros válidos.
 
-- `data/log607-1.txt`: desordenado (orden aleatorio).
-- `data/log607-2.txt`: casi ordenado cronologicamente.
-- Los dos tienen 6,818 registros validos.
-- `out/output608.out`: salida cronologica generada por la ultima corrida.
+- `data/log607-1.txt`: registros en orden aleatorio.
+- `data/log607-2.txt`: registros casi ordenados.
+- `out/output608.out`: archivo de resultados cronológicamente ordenados. Se reemplaza cada vez que se ordena otro archivo.
 
-Formato de cada linea:
+Formato de registro: `Mmm DD AAAA HH:MM:SS IP descripción del evento`.
+Ejemplo: `Sep 29 2024 14:37:38 10.14.19.188 Unauthorized Access Attempts`.
+Para consultar un día escribe: `Sep 14 2024` (mes en inglés, dos dígitos de día, cuatro de año).
 
-```text
-Mmm DD AAAA HH:MM:SS IP Descripcion del evento
-Sep 29 2024 14:37:38 10.14.19.188 Unauthorized Access Attempts
-```
+## Menú
 
-La fecha para una busqueda se escribe `Sep 14 2024`, respetando mayusculas
-y dos digitos de dia. Se validan fecha real (incluidos bisiestos), hora,
-formato IPv4 y descripcion no vacia.
+1. **Ordenar por fecha y hora** - solicita predicción de comparaciones, ejecuta Merge Sort estable sobre enlaces de nodos; muestra tiempo, comparaciones, profundidad máxima, verificación de orden y estabilidad; genera `out/output608.out`.
+2. **Buscar registros de un día** - requiere datos previamente ordenados; detiene recorrido al superar la fecha buscada.
+3. **Mostrar registros del día en descendente** - usa una Pila de punteros a nodos encontrados; reutiliza la última fecha consultada o pide una nueva.
+4. **Estadísticas** - total de registros, día(s), evento(s) e IP(s) más frecuentes; muestra todos los empates.
+5. **Salir**.
 
-## Estructuras y funciones
+## Estructuras implementadas
 
-- `include/Node.h`, `include/LinkedList.h`: lista simple con `head`, `tail` y operaciones O(1).
-- `include/Queue.h`: fila FIFO de lineas de entrada.
-- `include/Stack.h`: pila LIFO de punteros a nodos encontrados.
-- `include/DoublyLinkedList.h`: lista doble y Merge Sort estable que reenlaza los nodos.
-- `src/main.cpp`: lectura, validacion, menu, ordenamiento, busqueda, estadisticas, escritura.
-- `src/tests.cpp`: pruebas de estructuras vacias, un elemento, extremos, FIFO, LIFO,
-  recorrido doble e integridad de enlaces tras Merge Sort.
+- `include/LinkedList.h` y `include/Node.h`: lista simplemente ligada.
+- `include/Queue.h`: Fila FIFO usada para leer y procesar líneas.
+- `include/Stack.h`: Pila LIFO para invertir el resultado de una búsqueda.
+- `include/DoublyLinkedList.h`: lista doble y Merge Sort estable que re-enlaza nodos sin copiarlos a arreglo.
+- `src/tests.cpp`: programa de pruebas de estructuras.
+- `src/main.cpp`: analizador y menú principal.
 
-No se usan `std::list`, `std::forward_list`, `std::queue`, `std::stack`,
-`std::deque`, `std::sort` ni `std::stable_sort`. Unicamente se usan
-`std::map` para contar frecuencias en estadisticas; los logs se guardan
-exclusivamente en la lista doblemente ligada.
+No se utilizan `std::list`, `std::forward_list`, `std::queue`, `std::stack`, `std::deque`, `std::sort` ni `std::stable_sort`. `std::map` se usa solo para contar frecuencias de las estadísticas.
 
-## Menu
+## Pruebas y evidencias reproducibles
 
-1. Ordenar cronologicamente. Solicita prediccion antes de ordenar y mide
-   tiempo, comparaciones, profundidad maxima. Escribe `out/output608.out`.
-2. Buscar logs por dia (requiere ordenamiento). Detiene recorrido cuando
-   se sobrepasa la fecha solicitada.
-3. Mostrar ultimo dia buscado en descendente usando una Pila. Si no existe
-   busqueda previa, solicita una fecha.
-4. Estadisticas: total, fecha maxima, tipo maximo e IP maxima, incluidos
-   TODOS los empates.
-5. Salir.
+- `docs/pruebas_estructuras.txt`: lista vacía y un elemento, extremos, pila LIFO, fila FIFO, recorrido de lista doble y Merge Sort.
+- `docs/ejecucion_log607-2.txt` y `docs/ejecucion_log607-2_final.txt`: resultados del segundo archivo.
+- `tests/log_casos_borde.txt`: cuatro entradas correctas y cuatro incorrectas; empates de fecha/hora, eventos e IP.
+- `docs/pruebas_casos_borde.txt`: validación de archivo, día, hora, IP, evento, búsqueda sin resultados y lista ordenada.
+- `docs/prueba_archivo_inexistente.txt`: manejo de ruta que no existe.
+- `out/output608.out`: registros ordenados (6,818 líneas tras la última corrida con el segundo archivo).
+- `docs/Evidencia2.pdf`: documento de evidencia. **[Subir al finalizar las capturas y la reflexión.]**
 
-En una unica ejecucion no se puede **demostrar** el orden asintotico; el
-campo `Coincide con la COMPLEJIDAD TEORICA` contrasta tu prediccion con
-Merge Sort (O(n log n)). Las mediciones reales sirven para comparar archivos.
-
-## Comprobaciones y pruebas de borde
+Para ejecutar el caso de borde:
 
 ```bash
-./tests_estructuras
-./app
+printf '3\ntests/log_casos_borde.txt\n2\n1\n1\n2\nSep 14 2024\n3\n2\nSep 99 2024\n2\nJan 01 2023\n4\n1\n5\n' | ./output/app
 ```
 
-Para probar archivos adicionales, elige `3` y escribe, por ejemplo:
+Esta prueba sobreescribe temporalmente `out/output608.out` con cuatro registros. Para restaurar la salida final:
 
-- `tests/log_invalido.txt`: reporta 4 lineas invalidas y carga 2 validas.
-- `tests/log_empates.txt`: comprueba dos eventos con la misma marca de tiempo.
-- `tests/no_existe.txt`: mensaje claro de archivo inexistente.
+```bash
+printf '2\n1\n1\n5\n' | ./output/app
+wc -l out/output608.out
+```
 
-Para capturar el caso "buscar antes de ordenar", selecciona opcion 2 antes
-que la 1. Para probar "ordenar dos veces", selecciona la opcion 1 de nuevo.
+## Uso de herramientas de IA
 
-Las salidas reales de ejecucion verificadas se conservan en `tests/ejecucion_*.txt`.
-**Los tiempos cambian** con CPU, compilacion y carga del equipo.
+Se utilizó ChatGPT como apoyo para organizar los requisitos de la entrega, interpretar el estado de Git, preparar comandos de compilación y pruebas, revisar la correspondencia entre archivos y documentación, y crear borradores documentales. Las sugerencias se verificaron mediante ejecuciones en la terminal y revisión del repositorio. Una sugerencia anterior de README incluía `./ejecutar_mac.sh`, archivo que no existía; se corrigió usando los comandos manuales de compilación probados. 
 
-## Evidencia, IA y autoria
+## Video demostrativo (obligatorio)
+https://youtu.be/GkUFwjLrNLw
 
-- `docs/Evidencia2.pdf`: guia / borrador de evidencia que distingue resultados
-  verificados de informacion que debes completar personalmente.
-- Debes hacer tus propias capturas del programa **corriendo en tu equipo**,
-  historial incremental real de git/checkpoints, y grabar tu propio video sin cortes.
-- No afirmes que escribiste por tu cuenta el codigo que te propuso la IA.
-- El anexo del PDF incluye una falla real al crear un guion de pruebas:
-  se eligio `n^2` para una prueba de Merge Sort y se corrigio a `n log n`.
-- Relee, comprende, modifica y cita cualquier sugerencia de IA que decidas usar.
 
-### Enlace de video (obligatorio antes de entregar)
-
-**PENDIENTE: agrega aqui tu URL real de Drive o YouTube no listado.**
+El video debe mostrar la aplicación con ambos archivos y explicar Fila, lista doble, Pila y Merge Sort en 3-5 minutos, con grabación de pantalla y voz, sin cortes.
