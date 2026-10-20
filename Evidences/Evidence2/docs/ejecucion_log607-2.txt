@@ -1,0 +1,67 @@
+=== ANALIZADOR DE EVENTOS DE RED ===
+
+=== ARCHIVOS DISPONIBLES ===
+1) log607-1.txt (desordenado)
+2) log607-2.txt (casi ordenado)
+3) Escribir ruta de otro archivo
+0) Salir
+Selecciona archivo: 
+Archivo: data/log607-2.txt
+Registros cargados: 6818
+Lineas omitidas: 0
+
+========== MENU PRINCIPAL ==========
+1. Ordenar por fecha y hora
+2. Buscar logs por dia
+3. Mostrar logs del dia descendente (Pila)
+4. Estadisticas del archivo
+5. Salir
+Elige una opcion: Prediccion de comparaciones (1=n*log2(n), 2=n^2): 
+--- RESULTADO DEL ORDENAMIENTO ---
+Algoritmo: Merge Sort estable sobre nodos
+Archivo: data/log607-2.txt
+Registros: 6818
+Tiempo (ms): 0.760
+Comparaciones: 50624
+Profundidad maxima de recursion: 14
+Prediccion: n*log2(n)
+Coincide con la COMPLEJIDAD TEORICA: SI
+Verificacion de orden: CORRECTO
+Empates preservan el orden de llegada: SI
+Generado: out/output608.out
+
+========== MENU PRINCIPAL ==========
+1. Ordenar por fecha y hora
+2. Buscar logs por dia
+3. Mostrar logs del dia descendente (Pila)
+4. Estadisticas del archivo
+5. Salir
+Elige una opcion: 
+=== ESTADISTICAS ===
+Total de registros: 6818
+Dia(s) con mas incidentes (21 apariciones):
+  - Jan 27 2025 : 21
+Evento(s) mas frecuente(s) (342 apariciones):
+  - Malware Detection Alerts : 342
+IP(s) mas frecuente(s) (3 apariciones):
+  - 10.14.123.164 : 3
+  - 10.14.126.198 : 3
+  - 10.14.161.42 : 3
+  - 10.14.162.205 : 3
+  - 10.14.176.221 : 3
+  - 10.14.186.139 : 3
+  - 10.14.199.224 : 3
+  - 10.14.200.76 : 3
+  - 10.14.242.186 : 3
+  - 10.14.29.229 : 3
+  - 10.14.36.7 : 3
+  - 10.14.69.71 : 3
+  - 10.14.94.165 : 3
+
+========== MENU PRINCIPAL ==========
+1. Ordenar por fecha y hora
+2. Buscar logs por dia
+3. Mostrar logs del dia descendente (Pila)
+4. Estadisticas del archivo
+5. Salir
+Elige una opcion: Programa finalizado.

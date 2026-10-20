@@ -1,0 +1,14 @@
+=== PARTE A: PRUEBAS DE ESTRUCTURAS ===
+Lista vacia: no se puede eliminar.
+Lista simple (1 2 3): 1 -> 2 -> 3
+Lista un elemento: 9
+Pila vacia: no se puede hacer pop.
+Pila LIFO: 30 20 10 
+Fila vacia: no se puede hacer dequeue.
+Fila FIFO: 10 20 30 
+Lista doble vacia: nodo inexistente.
+Lista doble adelante: 1 2 3 4 
+Lista doble atras: 4 3 2 1 
+Lista doble un elemento: 2 
+Merge Sort nodos: 1 2 2 3 4 
+Todas las pruebas terminaron correctamente.
