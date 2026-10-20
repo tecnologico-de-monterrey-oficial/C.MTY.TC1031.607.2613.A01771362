@@ -1,0 +1,122 @@
+=== ANALIZADOR DE EVENTOS DE RED ===
+
+=== ARCHIVOS DISPONIBLES ===
+1) log607-1.txt (desordenado)
+2) log607-2.txt (casi ordenado)
+3) Escribir ruta de otro archivo
+0) Salir
+Selecciona archivo: Ruta del archivo: [OMITIDA] Linea 5: Dia inexistente o fecha fuera de rango.
+[OMITIDA] Linea 6: hora invalida, se espera HH:MM:SS
+[OMITIDA] Linea 7: IP IPv4 invalida
+[OMITIDA] Linea 8: descripcion de evento vacia
+
+Archivo: tests/log_casos_borde.txt
+Registros cargados: 4
+Lineas omitidas: 4
+
+========== MENU PRINCIPAL ==========
+1. Ordenar por fecha y hora
+2. Buscar logs por dia
+3. Mostrar logs del dia descendente (Pila)
+4. Estadisticas del archivo
+5. Salir
+Elige una opcion: Primero debes ordenar la lista con la opcion 1.
+
+========== MENU PRINCIPAL ==========
+1. Ordenar por fecha y hora
+2. Buscar logs por dia
+3. Mostrar logs del dia descendente (Pila)
+4. Estadisticas del archivo
+5. Salir
+Elige una opcion: Prediccion de comparaciones (1=n*log2(n), 2=n^2): 
+--- RESULTADO DEL ORDENAMIENTO ---
+Algoritmo: Merge Sort estable sobre nodos
+Archivo: tests/log_casos_borde.txt
+Registros: 4
+Tiempo (ms): 0.000
+Comparaciones: 5
+Profundidad maxima de recursion: 3
+Prediccion: n*log2(n)
+Coincide con la COMPLEJIDAD TEORICA: SI
+Verificacion de orden: CORRECTO
+Empates preservan el orden de llegada: SI
+Generado: out/output608.out
+
+========== MENU PRINCIPAL ==========
+1. Ordenar por fecha y hora
+2. Buscar logs por dia
+3. Mostrar logs del dia descendente (Pila)
+4. Estadisticas del archivo
+5. Salir
+Elige una opcion: Escribe el dia (Mmm DD AAAA): 
+Registros del dia (ascendente):
+Sep 14 2024 12:00:00 10.14.1.2 Failed Login Attempts
+Sep 14 2024 12:00:00 10.14.1.1 Malware Detection Alerts
+Total de registros del dia: 2
+
+========== MENU PRINCIPAL ==========
+1. Ordenar por fecha y hora
+2. Buscar logs por dia
+3. Mostrar logs del dia descendente (Pila)
+4. Estadisticas del archivo
+5. Salir
+Elige una opcion: 
+Registros del ultimo dia buscado (descendente con Pila):
+Sep 14 2024 12:00:00 10.14.1.1 Malware Detection Alerts
+Sep 14 2024 12:00:00 10.14.1.2 Failed Login Attempts
+Total de registros del dia: 2
+
+========== MENU PRINCIPAL ==========
+1. Ordenar por fecha y hora
+2. Buscar logs por dia
+3. Mostrar logs del dia descendente (Pila)
+4. Estadisticas del archivo
+5. Salir
+Elige una opcion: Escribe el dia (Mmm DD AAAA): Fecha invalida: Dia inexistente o fecha fuera de rango.
+
+========== MENU PRINCIPAL ==========
+1. Ordenar por fecha y hora
+2. Buscar logs por dia
+3. Mostrar logs del dia descendente (Pila)
+4. Estadisticas del archivo
+5. Salir
+Elige una opcion: Escribe el dia (Mmm DD AAAA): 
+Registros del dia (ascendente):
+Total de registros del dia: 0
+No hay registros para ese dia.
+
+========== MENU PRINCIPAL ==========
+1. Ordenar por fecha y hora
+2. Buscar logs por dia
+3. Mostrar logs del dia descendente (Pila)
+4. Estadisticas del archivo
+5. Salir
+Elige una opcion: 
+=== ESTADISTICAS ===
+Total de registros: 4
+Dia(s) con mas incidentes (2 apariciones):
+  - Sep 14 2024 : 2
+  - Sep 15 2024 : 2
+Evento(s) mas frecuente(s) (2 apariciones):
+  - Failed Login Attempts : 2
+  - Malware Detection Alerts : 2
+IP(s) mas frecuente(s) (2 apariciones):
+  - 10.14.1.1 : 2
+  - 10.14.1.2 : 2
+
+========== MENU PRINCIPAL ==========
+1. Ordenar por fecha y hora
+2. Buscar logs por dia
+3. Mostrar logs del dia descendente (Pila)
+4. Estadisticas del archivo
+5. Salir
+Elige una opcion: La lista ya esta ordenada; no se ejecuta Merge Sort otra vez.
+Archivo actualizado: out/output608.out
+
+========== MENU PRINCIPAL ==========
+1. Ordenar por fecha y hora
+2. Buscar logs por dia
+3. Mostrar logs del dia descendente (Pila)
+4. Estadisticas del archivo
+5. Salir
+Elige una opcion: Programa finalizado.

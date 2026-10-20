@@ -1,0 +1,39 @@
+=== ANALIZADOR DE EVENTOS DE RED ===
+
+=== ARCHIVOS DISPONIBLES ===
+1) log607-1.txt (desordenado)
+2) log607-2.txt (casi ordenado)
+3) Escribir ruta de otro archivo
+0) Salir
+Selecciona archivo: 
+Archivo: data/log607-2.txt
+Registros cargados: 6818
+Lineas omitidas: 0
+
+========== MENU PRINCIPAL ==========
+1. Ordenar por fecha y hora
+2. Buscar logs por dia
+3. Mostrar logs del dia descendente (Pila)
+4. Estadisticas del archivo
+5. Salir
+Elige una opcion: Prediccion de comparaciones (1=n*log2(n), 2=n^2): 
+--- RESULTADO DEL ORDENAMIENTO ---
+Algoritmo: Merge Sort estable sobre nodos
+Archivo: data/log607-2.txt
+Registros: 6818
+Tiempo (ms): 0.531
+Comparaciones: 50624
+Profundidad maxima de recursion: 14
+Prediccion: n*log2(n)
+Coincide con la COMPLEJIDAD TEORICA: SI
+Verificacion de orden: CORRECTO
+Empates preservan el orden de llegada: SI
+Generado: out/output608.out
+
+========== MENU PRINCIPAL ==========
+1. Ordenar por fecha y hora
+2. Buscar logs por dia
+3. Mostrar logs del dia descendente (Pila)
+4. Estadisticas del archivo
+5. Salir
+Elige una opcion: Programa finalizado.

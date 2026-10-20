@@ -1,0 +1,15 @@
+=== ANALIZADOR DE EVENTOS DE RED ===
+
+=== ARCHIVOS DISPONIBLES ===
+1) log607-1.txt (desordenado)
+2) log607-2.txt (casi ordenado)
+3) Escribir ruta de otro archivo
+0) Salir
+Selecciona archivo: Ruta del archivo: ERROR: el archivo no existe o no se puede abrir: tests/archivo_que_no_existe.txt
+
+=== ARCHIVOS DISPONIBLES ===
+1) log607-1.txt (desordenado)
+2) log607-2.txt (casi ordenado)
+3) Escribir ruta de otro archivo
+0) Salir
+Selecciona archivo: 
