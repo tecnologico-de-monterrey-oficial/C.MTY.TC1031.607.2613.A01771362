@@ -1,0 +1,12 @@
+x: 42
+direccion de x: 0x7ffd5b09712c
+valor de p: 0x7ffd5b09712c
+valor apuntado por p: 42
+valores de q
+direccion q: 0x55d512db32c0
+dato q: 5
+q luego de delete: 0 (NO se desreferencia)
+2/3
+Numerador: 2, Denominador: 3
+3/4
+Numerador: 3, Denominador: 4

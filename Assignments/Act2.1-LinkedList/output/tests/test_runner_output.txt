@@ -1,0 +1,56 @@
+=== TESTS DEL ADT LINKED LIST ===
+[PASS] 01 Lista inicialmente vacia
+[PASS] 02 Tamano inicialmente cero
+[PASS] 03 deleteData en lista vacia retorna false
+[PASS] 04 deleteAt en lista vacia retorna false
+[PASS] 05 findData en lista vacia retorna -1
+[PASS] 06 getData invalido lanza out_of_range
+[PASS] 07 operator[] invalido lanza out_of_range
+[PASS] 08 addFirst agrega al inicio
+[PASS] 09 addFirst incrementa size
+[PASS] 10 addLast agrega al final
+[PASS] 11 addLast incrementa size
+[PASS] 12 insert en posicion 0
+[PASS] 13 insert intermedio
+[PASS] 14 insert al final
+[PASS] 15 insert negativo lanza out_of_range
+[PASS] 16 insert mayor a size lanza out_of_range
+[PASS] 17 getData regresa posicion correcta
+[PASS] 18 updateData reemplaza primera coincidencia
+[PASS] 19 updateData ausente lanza out_of_range
+[PASS] 20 updateAt reemplaza por indice
+[PASS] 21 updateAt fuera de rango lanza
+[PASS] 22 findData encuentra indice
+[PASS] 23 findData ausente retorna -1
+[PASS] 24 deleteData borra coincidencia
+[PASS] 25 deleteData sin coincidencia false
+[PASS] 26 deleteAt borra cabeza
+[PASS] 27 deleteAt borra ultimo
+[PASS] 28 deleteAt invalido retorna false
+[PASS] 29 operator[] permite leer
+[PASS] 30 operator[] permite actualizar
+[PASS] 31 operator[] const permite leer
+[PASS] 32 operator[] negativo lanza
+[PASS] 33 operator= copia el contenido
+[PASS] 34 Copia independiente del original
+[PASS] 35 Original independiente de la copia
+[PASS] 36 Autoasignacion segura
+[PASS] 37 Constructor de copia es profundo
+[PASS] 38 clear libera y deja lista vacia
+[PASS] 39 Alias push_front funciona
+[PASS] 40 Alias push_back funciona
+[PASS] 41 Template string: addFirst
+[PASS] 42 Template string: addLast
+[PASS] 43 Template string: getData
+[PASS] 44 Template string: findData
+[PASS] 45 Template string: updateData
+[PASS] 46 Template string: deleteData
+[PASS] 47 Template string: copia profunda
+[PASS] 48 print muestra flechas
+[PASS] 49 deleteData elimina solo primera repeticion
+[PASS] 50 deleteAt elimina ultimo nodo
+[PASS] 51 deleteAt elimina unico nodo
+[PASS] 52 getData negativo lanza
+[PASS] 53 operator[] const fuera de rango lanza
+
+RESULTADO: 53 aprobadas, 0 fallidas.

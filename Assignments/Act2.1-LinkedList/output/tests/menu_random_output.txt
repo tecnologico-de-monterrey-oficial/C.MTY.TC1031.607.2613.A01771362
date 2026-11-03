@@ -1,0 +1,96 @@
+
+====== CREAR LISTA ENLAZADA ======
+1. Lista de enteros (int)
+2. Lista de textos (string)
+0. Salir
+Tipo de lista: 
+=== CREACION DE LISTA ===
+Cantidad de elementos (0-50): 1. Datos aleatorios
+2. Capturar datos
+Selecciona: Lista creada: [cielo -> nube -> rio -> nube -> mar]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Lista actual: [cielo -> nube -> rio -> nube -> mar]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: 
+====== CREAR LISTA ENLAZADA ======
+1. Lista de enteros (int)
+2. Lista de textos (string)
+0. Salir
+Tipo de lista: 
+=== CREACION DE LISTA ===
+Cantidad de elementos (0-50): 1. Datos aleatorios
+2. Capturar datos
+Selecciona: Lista creada: [72 -> 91 -> 0 -> 87 -> 97]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Lista actual: [72 -> 91 -> 0 -> 87 -> 97]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: 
+====== CREAR LISTA ENLAZADA ======
+1. Lista de enteros (int)
+2. Lista de textos (string)
+0. Salir
+Tipo de lista: Programa finalizado.

@@ -1,0 +1,385 @@
+
+====== CREAR LISTA ENLAZADA ======
+1. Lista de enteros (int)
+2. Lista de textos (string)
+0. Salir
+Tipo de lista: 
+=== CREACION DE LISTA ===
+Cantidad de elementos (0-50): 1. Datos aleatorios
+2. Capturar datos
+Selecciona: Elemento 0: Elemento 1: Elemento 2: Lista creada: [10 -> 20 -> 30]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Nuevo dato: Agregado al principio.
+Lista actual: [5 -> 10 -> 20 -> 30]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Nuevo dato: Agregado al final.
+Lista actual: [5 -> 10 -> 20 -> 30 -> 40]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Indice DESPUES del cual insertar: Nuevo dato: Insertado despues del indice 1.
+Lista actual: [5 -> 10 -> 15 -> 20 -> 30 -> 40]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Dato a borrar: Elemento eliminado.
+Lista actual: [5 -> 10 -> 15 -> 30 -> 40]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Indice a borrar: Elemento eliminado.
+Lista actual: [10 -> 15 -> 30 -> 40]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Indice a consultar: getData(2) = 30
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Valor a buscar: Valor nuevo: Elemento actualizado.
+Lista actual: [10 -> 16 -> 30 -> 40]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Indice a modificar: Valor nuevo: Elemento actualizado.
+Lista actual: [10 -> 17 -> 30 -> 40]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Valor a buscar: findData = 2
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Indice a consultar con []: lista[0] = 10
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Indice a modificar con []: Valor nuevo: Elemento actualizado con [].
+Lista actual: [10 -> 17 -> 30 -> 45]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Lista duplicada con operador =. Copia: [10 -> 17 -> 30 -> 45]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Lista actual: [10 -> 17 -> 30 -> 45]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Copia guardada: [10 -> 17 -> 30 -> 45]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Nuevo dato: Agregado al principio.
+Lista actual: [99 -> 10 -> 17 -> 30 -> 45]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Copia guardada: [10 -> 17 -> 30 -> 45]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Indice a consultar: getData(-1) = Error de rango: Indice fuera de rango
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Valor a buscar: Valor nuevo: Error de rango: Dato no encontrado para actualizar
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: Indice a borrar: Indice invalido.
+Lista actual: [99 -> 10 -> 17 -> 30 -> 45]
+
+========== MENU LINKED LIST ==========
+1. addFirst (agregar al inicio)
+2. addLast (agregar al final)
+3. insert (insertar despues de un indice)
+4. deleteData (borrar un valor)
+5. deleteAt (borrar por indice)
+6. getData (consultar por indice)
+7. updateData (actualizar por valor)
+8. updateAt (actualizar por indice)
+9. findData (buscar valor)
+10. operador [] (leer)
+11. operador [] (actualizar)
+12. operador = (duplicar lista)
+13. Mostrar lista
+14. Mostrar copia
+0. Crear otra lista / volver
+Opcion: 
+====== CREAR LISTA ENLAZADA ======
+1. Lista de enteros (int)
+2. Lista de textos (string)
+0. Salir
+Tipo de lista: Programa finalizado.

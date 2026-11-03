@@ -1,0 +1,3 @@
+node2 data: 10
+node2->next data: 20
+node1 data: 20

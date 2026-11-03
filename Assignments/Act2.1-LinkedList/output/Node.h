@@ -9,4 +9,3 @@ struct Node {
     explicit Node(const T& value) : data(value), next(nullptr) {}
     Node(const T& value, Node<T>* nextNode) : data(value), next(nextNode) {}
 };
-

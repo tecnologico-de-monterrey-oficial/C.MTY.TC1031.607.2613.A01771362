@@ -1,142 +1,139 @@
-
 // Pamela Hernandez Camacho
 // A01771362
- 
-#ifndef Queue_h
-#define Queue_h
- 
-#include "Node.h"
+
+// Pruebas del ADT Queue<T> (push, pop, front, size, copia y asignacion)
+
+#include <iostream>
+#include <string>
 #include <stdexcept>
- 
-// ADT Queue (FIFO) implementado con lista ligada
-template <typename T>
-class Queue {
-private:
-    Node<T>* head;   // primer elemento (el que sale)
-    Node<T>* tail;   // ultimo elemento (el que acaba de entrar)
-    int count;
- 
-public:
-    Queue() : head(nullptr), tail(nullptr), count(0) {}
-    Queue(const Queue& other);
-    Queue& operator=(const Queue& other);
-    ~Queue();
- 
-    void push(const T& data);
-    T pop();
-    T front() const;
-    int size() const;
-    bool empty() const;
-};
- 
- 
-// Constructor de copia (copia profunda)
-template <typename T>
-Queue<T>::Queue(const Queue& other) : head(nullptr), tail(nullptr), count(0) {
-    Node<T>* curr = other.head;
-    while (curr != nullptr) {
-        push(curr->data);
-        curr = curr->next;
-    }
-}
- 
- 
-// Operador de asignacion
-template <typename T>
-Queue<T>& Queue<T>::operator=(const Queue& other) {
-    if (this != &other) {
-        while (head != nullptr) {
-            pop();
-        }
-        Node<T>* curr = other.head;
-        while (curr != nullptr) {
-            push(curr->data);
-            curr = curr->next;
-        }
-    }
-    return *this;
-}
- 
- 
-// Destructor: libera todos los nodos
-template <typename T>
-Queue<T>::~Queue() {
-    while (head != nullptr) {
-        Node<T>* aux = head;
-        head = head->next;
-        delete aux;
-    }
-    tail = nullptr;
-    count = 0;
-}
- 
- 
-// Agrega un elemento al final del Queue
-// Complejidad: O(1)
-template <typename T>
-void Queue<T>::push(const T& data) {
-    Node<T>* newNode = new Node<T>(data);
- 
-    if (head == nullptr) {
-        head = newNode;
-        tail = newNode;
+#include "Queue.h"
+
+using namespace std;
+
+int pruebas = 0;
+int fallas = 0;
+
+// Revisa una condicion e imprime PASS o FAIL
+void revisar(bool condicion, const string& descripcion) {
+    pruebas++;
+    if (condicion) {
+        cout << "[PASS] " << descripcion << endl;
     }
     else {
-        tail->next = newNode;
-        tail = newNode;
+        fallas++;
+        cout << "[FAIL] " << descripcion << endl;
     }
- 
-    count++;
 }
- 
- 
-// Borra el primer elemento y regresa su valor
-// Lanza runtime_error si esta vacio. Complejidad: O(1)
-template <typename T>
-T Queue<T>::pop() {
-    if (head == nullptr) {
-        throw std::runtime_error("La fila esta vacia");
+
+// Estructura de prueba (igual que la de la taquilla)
+struct Cliente {
+    string nombre;
+    int boletos;
+};
+
+int main() {
+
+    cout << "===== Queue<int> =====" << endl;
+
+    Queue<int> q;
+
+    revisar(q.empty(), "Un Queue nuevo esta vacio");
+    revisar(q.size() == 0, "El tamano inicial es 0");
+
+    q.push(10);
+    q.push(5);
+    q.push(7);
+
+    revisar(q.size() == 3, "Despues de 3 push el tamano es 3");
+    revisar(q.front() == 10, "front() regresa el primero que entro (10)");
+    revisar(q.size() == 3, "front() no borra el elemento");
+    revisar(q.pop() == 10, "pop() regresa 10 (FIFO)");
+    revisar(q.pop() == 5, "pop() regresa 5");
+    revisar(q.front() == 7, "front() ahora es 7");
+    revisar(q.pop() == 7, "pop() regresa 7");
+    revisar(q.empty(), "Despues de sacar todo, el Queue queda vacio");
+
+    // Excepciones con el Queue vacio
+    bool lanzoPop = false;
+    try {
+        q.pop();
     }
- 
-    Node<T>* aux = head;
-    T data = aux->data;
- 
-    head = head->next;
- 
-    if (head == nullptr) {
-        tail = nullptr;
+    catch (runtime_error&) {
+        lanzoPop = true;
     }
- 
-    delete aux;
-    count--;
- 
-    return data;
-}
- 
- 
-// Regresa el primer elemento sin borrarlo
-// Lanza runtime_error si esta vacio. Complejidad: O(1)
-template <typename T>
-T Queue<T>::front() const {
-    if (head == nullptr) {
-        throw std::runtime_error("La fila esta vacia");
+    revisar(lanzoPop, "pop() en un Queue vacio lanza runtime_error");
+
+    bool lanzoFront = false;
+    try {
+        q.front();
     }
- 
-    return head->data;
+    catch (runtime_error&) {
+        lanzoFront = true;
+    }
+    revisar(lanzoFront, "front() en un Queue vacio lanza runtime_error");
+
+    // El Queue se puede volver a usar despues de vaciarse
+    q.push(99);
+    revisar(q.front() == 99 && q.size() == 1, "Se puede volver a usar despues de vaciarse");
+
+
+    cout << "\n===== Queue<string> =====" << endl;
+
+    Queue<string> s;
+    s.push("a");
+    s.push("b");
+    s.push("c");
+
+    revisar(s.pop() == "a", "pop() regresa \"a\"");
+    revisar(s.front() == "b", "front() regresa \"b\"");
+    revisar(s.size() == 2, "El tamano es 2");
+
+
+    cout << "\n===== Queue<Cliente> =====" << endl;
+
+    Queue<Cliente> fila;
+    fila.push({"Ana", 3});
+    fila.push({"Luis", 1});
+
+    Cliente c = fila.front();
+    revisar(c.nombre == "Ana" && c.boletos == 3, "front() regresa a Ana con 3 boletos");
+
+    c = fila.pop();
+    revisar(c.nombre == "Ana", "pop() atiende primero a Ana (orden de llegada)");
+
+    c = fila.pop();
+    revisar(c.nombre == "Luis" && c.boletos == 1, "pop() atiende despues a Luis con 1 boleto");
+    revisar(fila.empty(), "La fila queda vacia");
+
+
+    cout << "\n===== Copia y asignacion =====" << endl;
+
+    Queue<int> original;
+    original.push(1);
+    original.push(2);
+
+    Queue<int> copia(original);
+    copia.pop();
+
+    revisar(original.size() == 2 && copia.size() == 1,
+            "Constructor de copia: modificar la copia no cambia la original");
+
+    Queue<int> otra;
+    otra.push(100);
+    otra = original;
+
+    revisar(otra.size() == 2 && otra.front() == 1,
+            "operator=: reemplaza el contenido por el de la otra fila");
+
+    otra.pop();
+    revisar(original.front() == 1, "operator=: las filas son independientes");
+
+    otra = otra;
+    revisar(otra.size() == 1, "operator=: asignarse a si misma no daña la fila");
+
+
+    cout << "\n===== Resumen =====" << endl;
+    cout << (pruebas - fallas) << " de " << pruebas << " pruebas pasaron." << endl;
+
+    return fallas == 0 ? 0 : 1;
 }
- 
- 
-// Regresa cuantos elementos hay en el Queue
-template <typename T>
-int Queue<T>::size() const {
-    return count;
-}
- 
- 
-// Indica si el Queue esta vacio
-template <typename T>
-bool Queue<T>::empty() const {
-    return count == 0;
-}
- 
-#endif
