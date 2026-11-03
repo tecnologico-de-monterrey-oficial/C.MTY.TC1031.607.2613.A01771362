@@ -1,41 +1,35 @@
-//Pamela Hernández Camacho
-//A01771362
+// Practica independiente de apuntadores (no es parte del menu LinkedList).
 #include <iostream>
 #include <memory>
+#include "Fraction.h"
 using namespace std;
 
-#include "Fraction.h"
-
 int main() {
-
     int x = 42;
     int* p = &x;
-    
-    cout << x << endl;
-    cout << &x << endl;
-    cout << p << endl;
-    cout << *p << endl;
+    cout << "x: " << x << "\n";
+    cout << "direccion de x: " << &x << "\n";
+    cout << "valor de p: " << p << "\n";
+    cout << "valor apuntado por p: " << *p << "\n";
 
-    cout << "valores de q" << endl;
+    cout << "valores de q\n";
     int* q = new int(5);
-    cout << q << endl;
-    cout << *q << endl;
-
+    cout << "direccion q: " << q << "\n";
+    cout << "dato q: " << *q << "\n";
     delete q;
-    cout << q << endl;
-    cout << *q << endl;
+    q = nullptr;
+    cout << "q luego de delete: " << q << " (NO se desreferencia)\n";
 
     Fraction* f = new Fraction(2, 3);
-
     f->print();
-    cout << f->getDenominator() << "/" << f->getNumerator() << endl;
+    cout << "Numerador: " << f->getNumerator()
+         << ", Denominador: " << f->getDenominator() << "\n";
     delete f;
     f = nullptr;
 
-    std::unique_ptr<Fraction> g = std::make_unique<Fraction>(3, 4);
+    unique_ptr<Fraction> g = make_unique<Fraction>(3, 4);
     g->print();
-    cout << g->getDenominator() << "/" << g->getNumerator() << endl;
-
-
+    cout << "Numerador: " << g->getNumerator()
+         << ", Denominador: " << g->getDenominator() << "\n";
     return 0;
 }

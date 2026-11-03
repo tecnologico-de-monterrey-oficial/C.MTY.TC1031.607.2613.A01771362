@@ -1,24 +1,14 @@
-//Pamela Hernández Camacho
-//A01771362
+// Prueba independiente de Node<T> con apuntadores validos.
 #include <iostream>
+#include "Node.h"
 using namespace std;
 
-#include "Node.h"
-
 int main() {
+    Node<int> node1(20);
+    Node<int> node2(10, &node1);
 
-    auto node1 = std::make_unique<Node<int>>(20);
-
-    cout << "node1 data: " << node1->data << endl;
-
-    auto node2 = std::make_unique<Node<int>>(10, std::move(node1));
-
-    cout << "node1 data: " << node2->next->data << endl;
-    
-    
-
-    
-
-
+    cout << "node2 data: " << node2.data << "\n";
+    cout << "node2->next data: " << node2.next->data << "\n";
+    cout << "node1 data: " << node1.data << "\n";
     return 0;
 }
