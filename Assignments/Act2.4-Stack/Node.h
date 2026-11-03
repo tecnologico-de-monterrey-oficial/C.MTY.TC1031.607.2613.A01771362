@@ -1,5 +1,6 @@
 #pragma once
 
+// Nodo de una lista ligada simple, generico con template
 template <typename T>
 struct Node {
     T data;

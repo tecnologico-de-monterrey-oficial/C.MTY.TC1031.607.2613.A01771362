@@ -1,10 +1,13 @@
-#pragma once
 
+#pragma once
+ 
+// Nodo de una lista ligada simple, generico con template
 template <typename T>
 struct Node {
     T data;
     Node<T>* next;
-
+ 
     Node(const T& value) : data(value), next(nullptr) {}
-    Node(const T& value, Node<T>* nextNode) : data(value), next(nextNode) {} 
+    Node(const T& value, Node<T>* nextNode) : data(value), next(nextNode) {}
 };
+ 

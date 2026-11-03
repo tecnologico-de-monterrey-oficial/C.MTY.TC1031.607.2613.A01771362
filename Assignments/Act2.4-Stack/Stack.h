@@ -1,3 +1,6 @@
+// Pamela Hernandez Camacho
+// A01771362
+
 #ifndef Stack_h
 #define Stack_h
 
@@ -19,11 +22,32 @@ public:
     // Constructor
     Stack() : head(nullptr), count(0) {}
 
+    // Destructor: libera todos los nodos
+    ~Stack();
+
+    // Evita copias que compartirian los mismos nodos
+    Stack(const Stack&) = delete;
+    Stack& operator=(const Stack&) = delete;
+
     void push(const T& data);
     T pop();
     T top();
     int size();
 };
+
+
+// Destructor
+template <typename T>
+Stack<T>::~Stack() {
+
+    while (head != nullptr) {
+        Node<T>* aux = head;
+        head = head->next;
+        delete aux;
+    }
+
+    count = 0;
+}
 
 
 // PUSH
