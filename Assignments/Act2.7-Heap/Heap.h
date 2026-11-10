@@ -5,6 +5,8 @@
 #include <iostream>
 using namespace std;
 
+
+
 #ifndef Heap_h
 #define Heap_h
 
@@ -14,10 +16,29 @@ private:
     vector<T> heap;
     void swap(int a, int b);
 public:
+    Heap() {};
     Heap(); //constructor
     void push(T data);
     void print();
+    void printTree(int index, int space);
 };
+
+//constructor en base a una lista
+template <typename T>
+Heap<T>::Heap(vector<T> list){
+    //determinar cual es el último de los padres
+    parent = list.size()/2-1;
+    // iteramos desde el último de los padres hasta el primero
+    while (parent >= 0){
+        int aux= parent;
+        //iteramos mientras los hijos de aux sean padres
+        while(aux >= lastparent ){
+        //decrementamos el valor del índice de aux sean padres
+        }
+    }
+
+
+}
 
 // swap function to swap two elements in the heap
 template <typename T>
@@ -53,6 +74,8 @@ void Heap<T>::push(T data) {
         }
     }
 }
+
+
 
 // print function to print the elements of the heap
 template <typename T>
